@@ -1,0 +1,1495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMART SEED XII</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- POP-UP WELCOME MODAL -->
+    <div id="welcomeModal" class="modal-overlay">
+      <div class="modal-card">
+        <div class="modal-content">
+          <h3 class="modal-greeting">Selamat Datang!</h3>
+          <h1 class="modal-brand">SMART SEED XII</h1>
+          <p class="modal-theme">
+            <strong>Memperkuat Keberlanjutan:</strong><br />
+            Menuju Rantai Pasok yang Tangguh dan Bertanggung Jawab
+          </p>
+          <button id="closeModalBtn" class="btn-open-invitation">
+            Buka Undangan
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Logos Header -->
+    <header class="logo-header">
+      <!-- Logo 1: Sinarmas -->
+      <img
+        src="assets/images/Logo.svg"
+        alt="Sinarmas Agribusiness and Food"
+        class="logo-sinarmas"
+      />
+
+      <!-- Logo 2: Smart Seed -->
+      <img
+        src="assets/images/Logo SS.svg"
+        alt="Smart Seed Logo"
+        class="logo-smartseed"
+      />
+    </header>
+
+    <!-- Main Content -->
+    <main class="hero-container">
+      <!-- Kolom Kiri: Teks & Button -->
+      <section class="greeting-section">
+        <div class="content-left">
+          <div class="tagline">
+            <img
+              src="assets/images/tagline.svg"
+              alt="SMART SEED XII"
+              class="tagline-img"
+            />
+          </div>
+          <!-- Judul Utama -->
+          <h1 class="main-heading">
+            <span class="heading-regular">Memperkuat Keberlanjutan</span><br />
+            <strong class="heading-bold"
+              >Menuju Rantai Pasok yang Tangguh
+              <br class="when-where-dekstop" />dan Bertanggung Jawab</strong
+            >
+          </h1>
+
+          <div class="line-separator"></div>
+          <!-- Tombol Aksi -->
+          <a href="#form-rsvp" class="action-button">
+            <!-- Sisi Kiri: Kotak Hijau dengan Ikon Amplop -->
+            <div class="icon-box">
+              <img
+                src="assets/images/icon/envelope.svg"
+                alt="Envelope Icon"
+                class="envelope-icon"
+              />
+            </div>
+
+            <!-- Sisi Kanan: Teks "Click here for RSVP" -->
+            <span class="button-text">Klik disini untuk mendaftar</span>
+          </a>
+        </div>
+
+        <!-- Kolom Kanan: Gambar Hero / Daun -->
+        <div class="content-right">
+          <div class="hero-image-wrapper">
+            <img
+              src="assets/images/Illustration.svg"
+              alt="Hero Illustration SMART SEED XII"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION: RINGKASAN ACARA & GALERI FOTO -->
+      <!-- <div class="overview-gallery-section"> -->
+      <!-- Sub-Section 1: Ringkasan Acara -->
+      <div class="overview-wrapper ringkasan-section">
+        <div class="title-group">
+          <h2 class="section-title">Overview</h2>
+        </div>
+        <div class="overview-text">
+          <p>
+            <strong>SMART SEED XII</strong> merupakan forum tahunan yang
+            mempertemukan Sinar Mas Agribusiness and Food dengan para pemasok
+            dan pemangku kepentingan lainnya untuk memperkuat pemahaman terkait
+            keberlanjutan, menyelaraskan arah bisnis dan ekspektasi pasar, serta
+            membangun kolaborasi yang lebih kuat untuk perbaikan berkelanjutan.
+          </p>
+          <p>
+            Melalui forum ini, peserta akan memperoleh wawasan terkini mengenai
+            perkembangan industri, berbagi praktik baik, dan mengidentifikasi
+            langkah-langkah nyata serta peluang kolaborasi yang mendukung rantai
+            pasok yang tangguh dan pertumbuhan bisnis yang berkelanjutan.
+          </p>
+          <p class="highlight-text">
+            Sebagai mitra penting dalam rantai pasok Sinar Mas Agribusiness and
+            Food, kehadiran Anda sangat berarti untuk mendorong kemajuan bersama
+            dan menciptakan nilai jangka panjang bagi bisnis, masyarakat, dan
+            lingkungan.
+          </p>
+        </div>
+
+        <img src="assets/images/right-leaf.svg" class="ringkasan-leaf-bg" />
+      </div>
+
+      <!-- Sub-Section 2: Galeri Foto (6 Placeholder Online Unsplash) -->
+      <div class="gallery-wrapper">
+        <div class="title-group">
+          <h2 class="section-title">Galeri</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="assets/images/galeries/CAM 1 SMART SEED IX-224.jpg" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/galeries/CAM 1 SMART SEED IX-67.jpg" />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="assets/images/galeries/SMART SEED X Fieldtrip Refinery Marunda.jpeg"
+            />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/galeries/SMART SEED X.jpeg" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/galeries/SMART SEED XI - MEDAN (1).jpg" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/galeries/SMART SEED XI - MEDAN (2).jpg" />
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <!-- SECTION: WHEN & WHERE -->
+      <!-- TAMPILAN 1: DESKTOP (Muncul di Layar Komputer, Sembunyi di HP) -->
+      <div class="when-where-wrapper">
+        <div class="title-group">
+          <h2 class="section-title">Informasi Acara</h2>
+        </div>
+
+        <!-- 3 Card Menggunakan Import SVG + Daun Hover -->
+        <!-- TAMPILAN 1: DEKSTOP CARD (Muncul di HP, Sembunyi di Komputer) -->
+        <div class="when-where-dekstop">
+          <div class="cards-container">
+            <!-- Card 1: Tanggal (Hijau Solid) -->
+            <div class="card-hover-wrapper">
+              <div class="info-card card-outline">
+                <div class="card-icon">
+                  <img
+                    src="assets/images/icon/calendar.svg"
+                    alt="Calendar Icon"
+                    class="calendar-icon"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>Selasa,</h3>
+                  <p class="highlight-date">10 November 2026</p>
+                </div>
+              </div>
+              <!-- Accent Daun Melayang saat Hover -->
+              <img
+                src="assets/images/leaf.svg"
+                alt="Leaf Accent"
+                class="leaf-svg leaf-bottom-right"
+              />
+            </div>
+
+            <!-- Card 2: Waktu (Outline Hijau) -->
+            <div class="card-hover-wrapper">
+              <div class="info-card card-outline">
+                <div class="card-icon">
+                  <img
+                    src="assets/images/icon/clock.svg"
+                    alt="Clock Icon"
+                    class="clock-icon"
+                  />
+                </div>
+                <div class="card-content">
+                  <p class="time-text">08.00 – 16.00 WITA</p>
+                </div>
+              </div>
+              <!-- Accent Daun Melayang saat Hover -->
+              <img
+                src="assets/images/leaf.svg"
+                alt="Leaf Accent"
+                class="leaf-svg leaf-bottom-center"
+              />
+            </div>
+
+            <!-- Card 3: Lokasi Hotel (Outline Hijau) -->
+            <div class="card-hover-wrapper">
+              <div class="info-card card-outline">
+                <div class="card-icon">
+                  <img
+                    src="assets/images/icon/location.svg"
+                    alt="Location Icon"
+                    class="location-icon"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>Platinum Hotel</h3>
+                  <p class="location-text">
+                    Pantai Kedonganan No.91–93,<br />
+                    Kedonganan, Kec. Kuta, Kab.<br />
+                    Badung, Bali
+                  </p>
+                </div>
+              </div>
+              <!-- Accent Daun Melayang saat Hover -->
+              <img
+                src="assets/images/leaf.svg"
+                alt="Leaf Accent"
+                class="leaf-svg leaf-top-left"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- TAMPILAN 2: MOBILE CARD (Muncul di HP, Sembunyi di Komputer) -->
+        <div class="when-where-mobile">
+          <div class="event-info-card">
+            <img src="assets/images/leaf.svg" alt="" />
+            <div class="card-body-content">
+              <div class="event-datetime">
+                <p class="event-date">
+                  <strong>Selasa,</strong> 10 November 2026
+                </p>
+                <p class="event-time">08.00 – 16.00 WITA</p>
+              </div>
+              <div class="event-location">
+                <h3 class="venue-name">Platinum Hotel</h3>
+                <p class="venue-address">
+                  Pantai Kedonganan No.91–93,<br />
+                  Kedonganan, Kec. Kuta, Kab. Badung, Bali
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: SESSIONS AND DETAILS -->
+      <div class="sessions-wrapper">
+        <!-- Header Title dengan Garis di Kiri -->
+        <div class="title-group">
+          <h2 class="section-title">Rangkaian Acara</h2>
+        </div>
+
+        <!-- Wrapper Grid Sesi + Aksen Daun Melayang -->
+        <div class="sessions-container">
+          <div class="sessions-grid">
+            <!-- KOLOM KIRI -->
+            <div class="session-col">
+              <div class="session-item">
+                <div class="session-time">08:00 - 08:30</div>
+                <h3 class="session-title-item">Registrasi</h3>
+              </div>
+
+              <!-- Sesi 2 -->
+              <div class="session-item">
+                <div class="session-time">08:30 - 09:00</div>
+                <h3 class="session-title-item">Pembukaan</h3>
+              </div>
+
+              <!-- Sesi 3 -->
+              <div class="session-item">
+                <div class="session-time">09:00 - 09:20</div>
+                <h3 class="session-title-item">Sambutan Pembuka</h3>
+                <p class="session-desc">
+                  Keberlanjutan & Rantai Pasok yang Bertanggung Jawab
+                </p>
+              </div>
+
+              <!-- Sesi 4 -->
+              <div class="session-item">
+                <div class="session-time">09:20 - 10:00</div>
+                <h3 class="session-title-item">Keynote Speech</h3>
+                <p class="session-desc">
+                  Lanskap Baru Keberlanjutan: Ekspektasi Pasar, Perubahan
+                  Regulasi, dan Kesiapan Industri
+                </p>
+              </div>
+
+              <!-- Sesi 5 (Talkshow / Panel) -->
+              <div class="session-item">
+                <div class="session-time">10:00 - 12:10</div>
+                <h3 class="session-title-item">Talkshow Panel</h3>
+                <ul class="session-bullets">
+                  <li>
+                    <strong>Panel 1:</strong> Melampaui Ketertelusuran:
+                    Membangun Ketahanan Rantai Pasok melalui Data, Transparansi,
+                    dan Kolaborasi
+                  </li>
+                  <li>
+                    <strong>Panel 2:</strong> Melampaui Kepatuhan: NDPE IRF
+                    sebagai Penggerak Perbaikan Berkelanjutan dan Ketahanan
+                    Rantai Pasok
+                  </li>
+                  <li>
+                    <strong>Panel 3:</strong> Menghormati Hak Asasi Manusia
+                    dalam Rantai Pasok: Dari Komitmen Kebijakan Menuju
+                    Implementasi dan Dampak Nyata
+                  </li>
+                  <li>
+                    <strong>Panel 4:</strong> Faktor Emisi Spesifik Pemasok
+                  </li>
+                  <li>
+                    <strong>Panel 5:</strong> Mempersiapkan Petani Kecil dalam
+                    Rantai Pasok Sinar Mas: dari Pelibatan Petani hingga
+                    Kesiapan Menghadapi Pasar
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- KOLOM KANAN -->
+            <div class="session-col">
+              <!-- Sesi 6 -->
+              <div class="session-item">
+                <div class="session-time">12:10 - 12:30</div>
+                <h3 class="session-title-item">
+                  Showcase Inovasi & Partnership
+                </h3>
+                <p class="session-desc">
+                  Presentasi oleh Damimas & Nectary — Bersama Mendorong
+                  Keberlanjutan
+                </p>
+              </div>
+
+              <!-- Sesi 7 -->
+              <div class="session-item">
+                <div class="session-time">12:30 - 13:30</div>
+                <h3 class="session-title-item">Makan Siang & Networking</h3>
+              </div>
+
+              <!-- Sesi 8 -->
+              <div class="session-item">
+                <div class="session-time">13:30 - 15:00</div>
+                <h3 class="session-title-item">Focus Group Discussion (FGD)</h3>
+                <p class="session-desc">
+                  Mendorong Aksi Bersama untuk Keberlanjutan
+                </p>
+              </div>
+
+              <!-- Sesi 9 -->
+              <div class="session-item">
+                <div class="session-time">15:00 - 15:30</div>
+                <h3 class="session-title-item">
+                  SMART Sustainability Awards 2026
+                </h3>
+              </div>
+
+              <!-- Sesi 10 -->
+              <div class="session-item">
+                <div class="session-time">15:30 - 15:40</div>
+                <h3 class="session-title-item">Lucky Draw</h3>
+              </div>
+
+              <!-- Sesi 11 -->
+              <div class="session-item">
+                <div class="session-time">15:40 - 16:00</div>
+                <h3 class="session-title-item">Sambutan Penutup</h3>
+                <p class="session-desc">Dari Dialog menuju Aksi</p>
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="assets/images/leaf.svg"
+            class="session-decoration when-where-mobile"
+          />
+
+          <!-- Gambar Aksen Daun Melayang (Pojok Kanan Bawah) -->
+          <img
+            src="assets/images/right-leaf.svg"
+            alt="Leaf Decoration"
+            class="session-leaf-bg"
+          />
+        </div>
+      </div>
+
+      <!-- SECTION: OUR SPEAKERS -->
+      <div class="sessions-wrapper speakers-section">
+        <!-- Title di Kiri, Garis Mepet ke Layar Kanan -->
+        <div class="title-group">
+          <h2 class="section-title">Pembicara Kami</h2>
+        </div>
+        <!-- Grid 4 Kolom Pembicara -->
+
+        <div class="speakers-grid">
+          <!-- Baris Atas (4 Gambar) -->
+
+          <!-- Speaker 1 -->
+          <div class="speaker-card">
+            <div class="speaker-image-wrapper">
+              <span class="speaker-badge">Sambutan Pembuka</span>
+              <img
+                src="assets/images/speakers/Agus Purnomo.svg"
+                alt="Speaker 1"
+                class="speaker-img"
+              />
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Agus Purnomo</h3>
+              <p class="speaker-title">
+                Direktur Sinar Mas <br />Agribusiness and Food
+              </p>
+            </div>
+          </div>
+
+          <!-- Speaker 2 -->
+          <div class="speaker-card">
+            <div class="speaker-image-wrapper">
+              <span class="speaker-badge">Keynote Speaker</span>
+              <img
+                src="assets/images/speakers/Dr Mohamad Fadhil Hasan.png"
+                alt="Dr. M. Fadhil Hasan"
+                class="speaker-img"
+              />
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Dr. M. Fadhil Hasan</h3>
+              <p class="speaker-title">Ketua Bidang Luar Negeri, GAPKI</p>
+            </div>
+          </div>
+
+          <!-- Speaker 3 -->
+          <div class="speaker-card">
+            <div class="speaker-image-wrapper">
+              <span class="speaker-badge">Sambutan Penutup</span>
+              <img
+                src="assets/images/speakers/Ian Suwarganda.svg"
+                alt="Ian Suwarganda"
+                class="speaker-img"
+              />
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Ian Suwarganda</h3>
+              <p class="speaker-title">
+                Director of Sustainable Supply & Production, Sinar Mas
+                Agribusiness and Food
+              </p>
+            </div>
+          </div>
+
+          <!-- Speaker 4: Panelis 1 -->
+          <div class="speaker-card">
+            <div class="speaker-image-wrapper">
+              <span class="speaker-badge">Panelis</span>
+              <img
+                src="assets/images/speakers/Candra Kurniawan.svg"
+                alt="Candra Kurniawan"
+                class="speaker-img"
+              />
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Candra Kurniawan</h3>
+              <p class="speaker-title">
+                Head of Traceability and NDPE Verification, Sinar Mas
+                Agribusiness and Food
+              </p>
+            </div>
+          </div>
+
+          <!-- Speaker 5: Panelis 2 -->
+          <div class="speaker-card">
+            <div class="speaker-image-wrapper">
+              <span class="speaker-badge">Panelis</span>
+              <img
+                src="assets/images/speakers/Hero Sandjojo.svg"
+                alt="Hero Sandjojo"
+                class="speaker-img"
+              />
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Hero Sandjojo</h3>
+              <p class="speaker-title">
+                Head of Supplier Compliance, Sinar Mas Agribusiness and Food
+              </p>
+            </div>
+          </div>
+
+          <!-- Speaker 6: Panelis 3 -->
+          <div class="speaker-card">
+            <div class="speaker-image-wrapper">
+              <span class="speaker-badge">Panelis</span>
+              <img
+                src="assets/images/speakers/Rifki Tantowi Noor.svg"
+                alt="Rifki Tantowi Noor"
+                class="speaker-img"
+              />
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Rifki Tantowi Noor</h3>
+              <p class="speaker-title">
+                Head of Carbon Analytics, Sinar Mas Agribusiness and Food
+              </p>
+            </div>
+          </div>
+
+          <!-- Speaker 7: Panelis 4 -->
+          <div class="speaker-card">
+            <div class="speaker-image-wrapper">
+              <span class="speaker-badge">Panelis</span>
+              <img
+                src="assets/images/speakers/Helena Delima L G.svg"
+                alt="Helena Delima Lumban Gaol"
+                class="speaker-img"
+              />
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Helena Delima Lumban Gaol</h3>
+              <p class="speaker-title">
+                Head of Smallholders Innovation, Sinar Mas Agribusiness and Food
+              </p>
+            </div>
+          </div>
+
+          <!-- Speaker 8: Panelis 5 -->
+          <div class="speaker-card">
+            <div class="speaker-image-wrapper">
+              <span class="speaker-badge">Panelis</span>
+              <img
+                src="assets/images/speakers/Fauzan Kurniawan.svg"
+                alt="Fauzan Kurniawan"
+                class="speaker-img"
+              />
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name">Fauzan Kurniawan</h3>
+              <p class="speaker-title">
+                Head of Supplier Transformation, Sinar Mas Agribusiness and Food
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: Form RSVP -->
+      <div class="sessions-wrapper form-section" id="form-rsvp">
+        <!-- Section Header dengan Garis Dekoratif -->
+        <div class="title-group">
+          <h2 class="section-title">Registrasi</h2>
+        </div>
+
+        <div class="rsvp-container">
+          <!-- Form Box Container -->
+          <div class="rsvp-card">
+            <p class="rsvp-subtitle">
+              Silakan lengkapi data berikut untuk melakukan pendaftaran
+              <strong>SMART SEED XII</strong>.
+            </p>
+
+            <form
+              action="https://inv2.migunesia.com/smart-seed-xii"
+              id="form-rsvp-general_custom"
+              class="rsvp-form"
+              method="post"
+            >
+              <input type="hidden" name="stp" value="rsvp-general" />
+              <input type="hidden" name="lang" value="" />
+              <input type="hidden" name="event_session" value="" />
+              <input type="hidden" name="category_id" value="" />
+              <input type="hidden" name="request_from_ajax" value="1" />
+
+              <div class="form-section-label">Pendaftaran</div>
+              <div class="form-grid">
+                <!-- Input Nama Lengkap -->
+                <div class="form-group full-width">
+                  <label for="fullName">Nama Lengkap *</label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullname"
+                    placeholder="Masukkan nama lengkap Anda"
+                    required
+                  />
+                  <span class="form-note">Mohon diisi sesuai KTP</span>
+                </div>
+
+                <!-- Input Jabatan -->
+                <div class="form-group">
+                  <label for="position">Jabatan *</label>
+                  <input
+                    type="text"
+                    id="position"
+                    name="additional_data[3138]"
+                    placeholder="Masukkan Jabatan Anda"
+                    required
+                  />
+                </div>
+
+                <!-- Input Nomor Telepon / WhatsApp -->
+                <div class="form-group">
+                  <label for="phone">No Handphone / WhatsApp *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="telephone"
+                    placeholder="No Handphone / WhatsApp"
+                    required
+                  />
+                </div>
+
+                <!-- Input Email -->
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="company">Perusahaan *</label>
+                  <select id="company" name="additional_data[3139]" required>
+                    <option value="" disabled selected>
+                      -- Pilih perusahaan --
+                    </option>
+                    <option value="AAK">AAK</option>
+                    <option value="ADM">ADM</option>
+                    <option value="Agrina Plantations">
+                      Agrina Plantations
+                    </option>
+                    <option value="Agro Andalan">Agro Andalan</option>
+                    <option value="Agro Mega Perkasa">Agro Mega Perkasa</option>
+                    <option value="Agrotema">Agrotema</option>
+                    <option value="Alam Sawit Indo">Alam Sawit Indo</option>
+                    <option value="Amal Tani">Amal Tani</option>
+                    <option value="Anugerah Agro Sawit Perkasa">
+                      Anugerah Agro Sawit Perkasa
+                    </option>
+                    <option value="Anugerah Langkat Makmur">
+                      Anugerah Langkat Makmur
+                    </option>
+                    <option value="Anugerah Sawit Langgeng">
+                      Anugerah Sawit Langgeng
+                    </option>
+                    <option value="Astra Agro Lestari">
+                      Astra Agro Lestari
+                    </option>
+                    <option value="Awan Alam Anugra">Awan Alam Anugra</option>
+                    <option value="Berlian Nusantara Perkasa">
+                      Berlian Nusantara Perkasa
+                    </option>
+                    <option value="Bintang Harapan Desa">
+                      Bintang Harapan Desa
+                    </option>
+                    <option value="Buana Sawit Indah">Buana Sawit Indah</option>
+                    <option value="Bukit Bintang Sawit">
+                      Bukit Bintang Sawit
+                    </option>
+                    <option value="Bukit Palem">Bukit Palem</option>
+                    <option value="Bumi Daya Agrotamas">
+                      Bumi Daya Agrotamas
+                    </option>
+                    <option value="Bumi Gading Prima">Bumi Gading Prima</option>
+                    <option value="Bumi Sawit Wijaya">Bumi Sawit Wijaya</option>
+                    <option value="Bumitama Agri">Bumitama Agri</option>
+                    <option value="BW International">BW International</option>
+                    <option value="Cahaya Lestari Sawita">
+                      Cahaya Lestari Sawita
+                    </option>
+                    <option value="Capela">Capela</option>
+                    <option value="Cargill">Cargill</option>
+                    <option value="Chellam Plantations">
+                      Chellam Plantations
+                    </option>
+                    <option value="Chora Agro Resources">
+                      Chora Agro Resources
+                    </option>
+                    <option value="Ciptamas Bumiselaras">
+                      Ciptamas Bumiselaras
+                    </option>
+                    <option value="Daemeter">Daemeter</option>
+                    <option value="Daya Semesta Agro Persada">
+                      Daya Semesta Agro Persada
+                    </option>
+                    <option value="Dhanista Surya Nusantara">
+                      Dhanista Surya Nusantara
+                    </option>
+                    <option value="Djaya Globalindo Sentosa">
+                      Djaya Globalindo Sentosa
+                    </option>
+                    <option value="Duta Agro Makmur Indah">
+                      Duta Agro Makmur Indah
+                    </option>
+                    <option value="Duta Marga">Duta Marga</option>
+                    <option value="Eagle High Plantations">
+                      Eagle High Plantations
+                    </option>
+                    <option value="Earthworm">Earthworm</option>
+                    <option value="Ensem Group">Ensem Group</option>
+                    <option value="Erakarya Mukti Jaya">
+                      Erakarya Mukti Jaya
+                    </option>
+                    <option value="Fairco">Fairco</option>
+                    <option value="Fuji Oil">Fuji Oil</option>
+                    <option value="Genk Agromas">Genk Agromas</option>
+                    <option value="Genting Plantations Berhad">
+                      Genting Plantations Berhad
+                    </option>
+                    <option value="Global Berkat Usahatama">
+                      Global Berkat Usahatama
+                    </option>
+                    <option value="Global Palm Resources">
+                      Global Palm Resources
+                    </option>
+                    <option value="Golden Oilindo Nusantara">
+                      Golden Oilindo Nusantara
+                    </option>
+                    <option value="Goodhope">Goodhope</option>
+                    <option value="Indonusa Plantation">
+                      Indonusa Plantation
+                    </option>
+                    <option value="Inisiatif Dagang Hijau">
+                      Inisiatif Dagang Hijau
+                    </option>
+                    <option value="International Trade Center (ITC)">
+                      International Trade Center (ITC)
+                    </option>
+                    <option value="Jaya Baru Pertama">Jaya Baru Pertama</option>
+                    <option value="Jaya Gemilang Sukses">
+                      Jaya Gemilang Sukses
+                    </option>
+                    <option value="Kalimantan Sanggar Pusaka">
+                      Kalimantan Sanggar Pusaka
+                    </option>
+                    <option value="Kalimantan Sawit Kusuma">
+                      Kalimantan Sawit Kusuma
+                    </option>
+                    <option value="Kalimantan Sawit Kusuma Group">
+                      Kalimantan Sawit Kusuma Group
+                    </option>
+                    <option value="Karya Teknik">Karya Teknik</option>
+                    <option value="Keza Lintas Buana">Keza Lintas Buana</option>
+                    <option value="KPN Plantation">KPN Plantation</option>
+                    <option value="Kriston Agro">Kriston Agro</option>
+                    <option value="Kuala Lumpur Kepong Berhad">
+                      Kuala Lumpur Kepong Berhad
+                    </option>
+                    <option value="Langkat Nusantara Kepong (KLK Group)">
+                      Langkat Nusantara Kepong (KLK Group)
+                    </option>
+                    <option value="Laot Bangko">Laot Bangko</option>
+                    <option value="Loreal">Loreal</option>
+                    <option value="Lowyat Group">Lowyat Group</option>
+                    <option value="LX International Corp">
+                      LX International Corp
+                    </option>
+                    <option value="Mahkota">Mahkota</option>
+                    <option value="Makmur Andalan Sawit">
+                      Makmur Andalan Sawit
+                    </option>
+                    <option value="Marita Makmur Jaya">
+                      Marita Makmur Jaya
+                    </option>
+                    <option value="MARS">MARS</option>
+                    <option value="Matahari Kahuripan Indonesia">
+                      Matahari Kahuripan Indonesia
+                    </option>
+                    <option value="Medco Agro">Medco Agro</option>
+                    <option value="Merlung Inti Lestari">
+                      Merlung Inti Lestari
+                    </option>
+                    <option value="Mewah">Mewah</option>
+                    <option value="Mitra Agro Sembada">
+                      Mitra Agro Sembada
+                    </option>
+                    <option value="Mitra Agung Sawita Sejati">
+                      Mitra Agung Sawita Sejati
+                    </option>
+                    <option value="Mitra Bumi Borneo">Mitra Bumi Borneo</option>
+                    <option value="Mitra Sawit Perkasa">
+                      Mitra Sawit Perkasa
+                    </option>
+                    <option value="Mondelez">Mondelez</option>
+                    <option value="MP Evans">MP Evans</option>
+                    <option value="Mujur Timber">Mujur Timber</option>
+                    <option value="Multi Palma Sejahtera">
+                      Multi Palma Sejahtera
+                    </option>
+                    <option value="Multi Prima Entakai">
+                      Multi Prima Entakai
+                    </option>
+                    <option value="Mustika Agung">Mustika Agung</option>
+                    <option value="Nafasindo">Nafasindo</option>
+                    <option value="Nagamas">Nagamas</option>
+                    <option value="Neste">Neste</option>
+                    <option value="Nestle">Nestle</option>
+                    <option value="Non Group-Agro Borneo Mas">
+                      Non Group-Agro Borneo Mas
+                    </option>
+                    <option value="Non Group-Agro Serasi Lestari">
+                      Non Group-Agro Serasi Lestari
+                    </option>
+                    <option value="Non Group-Agro Wijaya Industri">
+                      Non Group-Agro Wijaya Industri
+                    </option>
+                    <option value="Non Group-Anderson Unedo">
+                      Non Group-Anderson Unedo
+                    </option>
+                    <option value="Non Group-Berau Karetindo Lestari">
+                      Non Group-Berau Karetindo Lestari
+                    </option>
+                    <option value="Non Group-Beurata Subur Persada">
+                      Non Group-Beurata Subur Persada
+                    </option>
+                    <option value="Non Group-Citrakoprasindo Tani">
+                      Non Group-Citrakoprasindo Tani
+                    </option>
+                    <option value="Non Group-Ensem Lestari">
+                      Non Group-Ensem Lestari
+                    </option>
+                    <option value="Non Group-Gemilang Bersama Utama Palm Oil">
+                      Non Group-Gemilang Bersama Utama Palm Oil
+                    </option>
+                    <option value="Non Group-Guna Setia Pratama">
+                      Non Group-Guna Setia Pratama
+                    </option>
+                    <option value="Non Group-Hatonduhan Dearma Sawita">
+                      Non Group-Hatonduhan Dearma Sawita
+                    </option>
+                    <option value="Non Group-Indomas Mitra Teknik">
+                      Non Group-Indomas Mitra Teknik
+                    </option>
+                    <option value="Non Group-Juliprima Kentjana">
+                      Non Group-Juliprima Kentjana
+                    </option>
+                    <option value="Non Group-Kalimantan Agro Pusaka">
+                      Non Group-Kalimantan Agro Pusaka
+                    </option>
+                    <option value="Non Group-Karimun Aromatics">
+                      Non Group-Karimun Aromatics
+                    </option>
+                    <option value="Non Group-Karya Hevea Indonesia">
+                      Non Group-Karya Hevea Indonesia
+                    </option>
+                    <option value="Non Group-Karya Panen Terus">
+                      Non Group-Karya Panen Terus
+                    </option>
+                    <option value="Non Group-Kaspari Agro Sentosa">
+                      Non Group-Kaspari Agro Sentosa
+                    </option>
+                    <option value="Non Group-Kharisma Iskandar Muda">
+                      Non Group-Kharisma Iskandar Muda
+                    </option>
+                    <option value="Non Group-Lambang Bumi Perkasa">
+                      Non Group-Lambang Bumi Perkasa
+                    </option>
+                    <option value="Non Group-Langgak Inti Lestari">
+                      Non Group-Langgak Inti Lestari
+                    </option>
+                    <option value="Non Group-Langkat Sawithijau Pratama">
+                      Non Group-Langkat Sawithijau Pratama
+                    </option>
+                    <option value="Non Group-Mahato Inti Sawit">
+                      Non Group-Mahato Inti Sawit
+                    </option>
+                    <option value="Non Group-Multi Agro Sentosa">
+                      Non Group-Multi Agro Sentosa
+                    </option>
+                    <option value="Non Group-Mutiara Agro Sejahtera">
+                      Non Group-Mutiara Agro Sejahtera
+                    </option>
+                    <option value="Non Group-Palma Gemilang Kencana">
+                      Non Group-Palma Gemilang Kencana
+                    </option>
+                    <option value="Non Group-Raja Marga">
+                      Non Group-Raja Marga
+                    </option>
+                    <option value="Non Group-Serdang Hulu">
+                      Non Group-Serdang Hulu
+                    </option>
+                    <option value="Non Group-Sinar Utama Nabati">
+                      Non Group-Sinar Utama Nabati
+                    </option>
+                    <option value="Non Group-Sungai Bahar Pasifik Utama">
+                      Non Group-Sungai Bahar Pasifik Utama
+                    </option>
+                    <option value="Non Group-Surya Sumber Sawit Abadi">
+                      Non Group-Surya Sumber Sawit Abadi
+                    </option>
+                    <option value="Non Group-Libo Sawit Perkasa">
+                      Non Group-Libo Sawit Perkasa
+                    </option>
+                    <option value="Non Group-Tian Tujuh Puluh Utama">
+                      Non Group-Tian Tujuh Puluh Utama
+                    </option>
+                    <option value="Non Group-Yuni bersaudara sejahtera">
+                      Non Group-Yuni bersaudara sejahtera
+                    </option>
+                    <option value="Non Group-Perkebunan hasil Musi Lestari">
+                      Non Group-Perkebunan hasil Musi Lestari
+                    </option>
+                    <option value="Non Group-Sinar pandawa">
+                      Non Group-Sinar pandawa
+                    </option>
+                    <option value="Non Group-Toba bara">
+                      Non Group-Toba bara
+                    </option>
+                    <option value="Non Group-Fenyen Agro lestari">
+                      Non Group-Fenyen Agro lestari
+                    </option>
+                    <option value="Non Group-Indah Potjan">
+                      Non Group-Indah Potjan
+                    </option>
+                    <option value="Non Group-Putera Bangka Tani">
+                      Non Group-Putera Bangka Tani
+                    </option>
+                    <option value="Non Group-Sebanga Multi Sawit">
+                      Non Group-Sebanga Multi Sawit
+                    </option>
+                    <option value="Non Group-Serbahuta jaya">
+                      Non Group-Serbahuta jaya
+                    </option>
+                    <option value="Non Group-Sewangi Sejati Luhur">
+                      Non Group-Sewangi Sejati Luhur
+                    </option>
+                    <option value="Non Group-Andika Permata Sawit Lestari">
+                      Non Group-Andika Permata Sawit Lestari
+                    </option>
+                    <option value="Non Group-Alno Agro Utama">
+                      Non Group-Alno Agro Utama
+                    </option>
+                    <option
+                      value="Non Group-Austindo Nusantara Jaya Agri Siais"
+                    >
+                      Non Group-Austindo Nusantara Jaya Agri Siais
+                    </option>
+                    <option value="Non Group-Bumi Tamiang Sentosa">
+                      Non Group-Bumi Tamiang Sentosa
+                    </option>
+                    <option value="Non Group-Inti Guna Nabati">
+                      Non Group-Inti Guna Nabati
+                    </option>
+                    <option value="Non Group-Bumitama Gunajaya Abadi">
+                      Non Group-Bumitama Gunajaya Abadi
+                    </option>
+                    <option value="Non Group-Sukses Sawit Gasing">
+                      Non Group-Sukses Sawit Gasing
+                    </option>
+                    <option value="Non Group-Borneo Bhakti Sejahtera">
+                      Non Group-Borneo Bhakti Sejahtera
+                    </option>
+                    <option value="Non Group-Golden Blossom Sumatra">
+                      Non Group-Golden Blossom Sumatra
+                    </option>
+                    <option value="Non Group-Buditani Kembangjaya">
+                      Non Group-Buditani Kembangjaya
+                    </option>
+                    <option value="Non Group-Multiguna Lestari Abadi">
+                      Non Group-Multiguna Lestari Abadi
+                    </option>
+                    <option value="Non Group-Betami Berkah Pratama">
+                      Non Group-Betami Berkah Pratama
+                    </option>
+                    <option value="Non Group-Sejahtera Tani Damai">
+                      Non Group-Sejahtera Tani Damai
+                    </option>
+                    <option value="Non Group-Seuramoe Agro Persada">
+                      Non Group-Seuramoe Agro Persada
+                    </option>
+                    <option value="Non Group-Leomas Anugerah Bersaudara">
+                      Non Group-Leomas Anugerah Bersaudara
+                    </option>
+                    <option value="Non Group-Betami">Non Group-Betami</option>
+                    <option value="Non Group-Borneo Sawit Persada">
+                      Non Group-Borneo Sawit Persada
+                    </option>
+                    <option value="Non Group-Ika Bina Agro Wisesa">
+                      Non Group-Ika Bina Agro Wisesa
+                    </option>
+                    <option value="Non Group-Palmaris Raya">
+                      Non Group-Palmaris Raya
+                    </option>
+                    <option value="Non Group-Sumber Alam Makmur Sentosa">
+                      Non Group-Sumber Alam Makmur Sentosa
+                    </option>
+                    <option value="Non Group-Mitra Bumi">
+                      Non Group-Mitra Bumi
+                    </option>
+                    <option value="Non Group-Kriya Swarna Pubian">
+                      Non Group-Kriya Swarna Pubian
+                    </option>
+                    <option value="Non Group-Persada Nusa Nabati Indonesia">
+                      Non Group-Persada Nusa Nabati Indonesia
+                    </option>
+                    <option value="Non Group-Sawit Riau Makmur">
+                      Non Group-Sawit Riau Makmur
+                    </option>
+                    <option value="Non Group-Sugih Riesta Jaya">
+                      Non Group-Sugih Riesta Jaya
+                    </option>
+                    <option value="Non Group-Djaja Putra Indonesia">
+                      Non Group-Djaja Putra Indonesia
+                    </option>
+                    <option value="Nova Plantations">Nova Plantations</option>
+                    <option value="NT Corp">NT Corp</option>
+                    <option value="NT Corp Group">NT Corp Group</option>
+                    <option value="Nusantara Sawit Sejahtera Group">
+                      Nusantara Sawit Sejahtera Group
+                    </option>
+                    <option value="Oriental">Oriental</option>
+                    <option value="Oriental Group">Oriental Group</option>
+                    <option value="Padasa">Padasa</option>
+                    <option value="Palm Mas Asri">Palm Mas Asri</option>
+                    <option value="Panca Eka">Panca Eka</option>
+                    <option value="Payung Mitrajaya Mandiri">
+                      Payung Mitrajaya Mandiri
+                    </option>
+                    <option value="PepsiCo">PepsiCo</option>
+                    <option value="Perkasa Group">Perkasa Group</option>
+                    <option value="Perkebunan & Pertanian Pati Sari">
+                      Perkebunan &amp; Pertanian Pati Sari
+                    </option>
+                    <option value="Persada Alam Jaya">Persada Alam Jaya</option>
+                    <option
+                      value="Perusahaan Perkebunan dan Pertanian Serdang Tengah"
+                    >
+                      Perusahaan Perkebunan dan Pertanian Serdang Tengah
+                    </option>
+                    <option value="Porman Anugerah Sejati">
+                      Porman Anugerah Sejati
+                    </option>
+                    <option value="POSCO International">
+                      POSCO International
+                    </option>
+                    <option value="Prima Antar Surya">Prima Antar Surya</option>
+                    <option value="Prima Sauhur Lestari">
+                      Prima Sauhur Lestari
+                    </option>
+                    <option value="Proforest">Proforest</option>
+                    <option value="PT Bio Inti Agrindo">
+                      PT Bio Inti Agrindo
+                    </option>
+                    <option value="PTPN IV">PTPN IV</option>
+                    <option value="Putra Bangka Mandiri">
+                      Putra Bangka Mandiri
+                    </option>
+                    <option value="Rainforest Alliance">
+                      Rainforest Alliance
+                    </option>
+                    <option value="Rapi Technik">Rapi Technik</option>
+                    <option value="Riau Sawit">Riau Sawit</option>
+                    <option value="Runding Putra Persada">
+                      Runding Putra Persada
+                    </option>
+                    <option value="Sahabat Group">Sahabat Group</option>
+                    <option value="Sampoerna Agro">Sampoerna Agro</option>
+                    <option value="Samsung C&T">Samsung C&amp;T</option>
+                    <option value="Samudra Biru Cemerlang">
+                      Samudra Biru Cemerlang
+                    </option>
+                    <option value="Sawit Anugrah Sejahtera">
+                      Sawit Anugrah Sejahtera
+                    </option>
+                    <option value="Sawit Jaya Makmur Sentosa">
+                      Sawit Jaya Makmur Sentosa
+                    </option>
+                    <option value="Sawit Jaya Mandiri Lestari">
+                      Sawit Jaya Mandiri Lestari
+                    </option>
+                    <option value="Sawit Lestari">Sawit Lestari</option>
+                    <option value="Sawit Nagan Raya Makmur">
+                      Sawit Nagan Raya Makmur
+                    </option>
+                    <option value="Sawit Nagan Raya Makmur Group">
+                      Sawit Nagan Raya Makmur Group
+                    </option>
+                    <option value="Sawit Permai Abadi">
+                      Sawit Permai Abadi
+                    </option>
+                    <option value="Sawit Sumatera Perkasa">
+                      Sawit Sumatera Perkasa
+                    </option>
+                    <option value="Sawitmas Parenggean">
+                      Sawitmas Parenggean
+                    </option>
+                    <option value="SD Guthrie Berhad">SD Guthrie Berhad</option>
+                    <option value="Sentosa Kalimantan Jaya">
+                      Sentosa Kalimantan Jaya
+                    </option>
+                    <option value="Sin Tek Huat Group">
+                      Sin Tek Huat Group
+                    </option>
+                    <option value="Sinar Alam">Sinar Alam</option>
+                    <option value="Sinar Langkat Perkasa">
+                      Sinar Langkat Perkasa
+                    </option>
+                    <option value="Sinar Tenera">Sinar Tenera</option>
+                    <option value="SIPEF - PT Dendymarker Indah Lestari">
+                      SIPEF - PT Dendymarker Indah Lestari
+                    </option>
+                    <option value="SIPEF - PT Tolan Tiga Indonesia">
+                      SIPEF - PT Tolan Tiga Indonesia
+                    </option>
+                    <option value="SK Plus Palm">SK Plus Palm</option>
+                    <option value="SMART Tbk">SMART Tbk</option>
+                    <option value="Socfin">Socfin</option>
+                    <option value="Southern Acid">Southern Acid</option>
+                    <option value="ST International">ST International</option>
+                    <option value="Sumber Kencana">Sumber Kencana</option>
+                    <option value="Surya Gemilang Agro Mandiri">
+                      Surya Gemilang Agro Mandiri
+                    </option>
+                    <option value="Surya Inti Palmoil">
+                      Surya Inti Palmoil
+                    </option>
+                    <option value="Surya Sawit Sejahtera">
+                      Surya Sawit Sejahtera
+                    </option>
+                    <option value="Surya Utama Nabati">
+                      Surya Utama Nabati
+                    </option>
+                    <option value="Swastisiddhi Amagra">
+                      Swastisiddhi Amagra
+                    </option>
+                    <option value="Syaukath">Syaukath</option>
+                    <option value="Synthesis Agro">Synthesis Agro</option>
+                    <option value="Tasma Puja">Tasma Puja</option>
+                    <option value="Tenera Inti Sawit">Tenera Inti Sawit</option>
+                    <option value="Tri Daya Jaya">Tri Daya Jaya</option>
+                    <option value="Trinity">Trinity</option>
+                    <option value="Triputra Agro Persada">
+                      Triputra Agro Persada
+                    </option>
+                    <option value="Uni Seraya">Uni Seraya</option>
+                    <option value="Unilever">Unilever</option>
+                    <option
+                      value="United Kingdom Indonesia Plantations (UKINDO)"
+                    >
+                      United Kingdom Indonesia Plantations (UKINDO)
+                    </option>
+                    <option value="United Mallaca Berhad">
+                      United Mallaca Berhad
+                    </option>
+                    <option value="United Plantations Berhad">
+                      United Plantations Berhad
+                    </option>
+                    <option value="Varem Sawit Cemerlang">
+                      Varem Sawit Cemerlang
+                    </option>
+                    <option value="Wahyu Putra Ramadhan">
+                      Wahyu Putra Ramadhan
+                    </option>
+                    <option value="Wilian Perkasa">Wilian Perkasa</option>
+                    <option value="Winrock International">
+                      Winrock International
+                    </option>
+                  </select>
+                </div>
+
+                <!-- Input Pertanyaan -->
+                <div class="form-group full-width">
+                  <label for="notes">Pertanyaan</label>
+                  <textarea
+                    id="notes"
+                    name="additional_data[3127]"
+                    rows="4"
+                    placeholder="Jika ada pertanyaan, silakan isi"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="rsvp-info-block">
+                <h3>Informasi Hotel</h3>
+                <p>
+                  Untuk memberikan kemudahan dan kenyamanan bagi para peserta,
+                  kami telah memperoleh harga khusus akomodasi dari hotel tempat
+                  acara diselenggarakan. Untuk melakukan reservasi kamar,
+                  silakan klik tautan di bawah ini.
+                </p>
+                <a
+                  href="http://tiny.cc/SMARTSEEDHotelReservation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  http://tiny.cc/SMARTSEEDHotelReservation
+                </a>
+              </div>
+
+              <div class="rsvp-consent">
+                <h3>Persetujuan Dokumentasi dan Publikasi Kegiatan</h3>
+                <label class="consent-label" for="consent">
+                  <span>
+                    Selama kegiatan berlangsung, foto dan/atau video dapat
+                    diambil sebagai bagian dari dokumentasi kegiatan.
+                    Dokumentasi yang menampilkan peserta dapat digunakan oleh
+                    Sinar Mas Agribusiness &amp; Food untuk keperluan
+                    dokumentasi dan pelaporan kegiatan, serta publikasi dan
+                    komunikasi terkait kegiatan melalui media internal maupun
+                    eksternal, termasuk laporan, presentasi, situs web resmi,
+                    dan kanal media sosial.
+                    <br /><br />
+                    <div class="consent-approval">
+                      <input
+                        type="checkbox"
+                        id="consent"
+                        name="consent"
+                        required
+                      />
+                      <strong>
+                        Dengan melanjutkan proses pendaftaran, saya menyatakan
+                        bahwa saya telah membaca, memahami, dan menyetujui
+                        informasi tersebut.</strong
+                      >
+                    </div>
+                  </span>
+                </label>
+              </div>
+
+              <!-- Tombol Submit Form -->
+              <div class="form-action">
+                <button
+                  type="submit"
+                  class="rsvp-submit-btn"
+                  id="submit_rsvp_general_custom"
+                  name="submit_rsvp_general_custom"
+                  value="submit_rsvp_general_custom"
+                  disabled
+                >
+                  <span>Kirim RSVP</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <img src="assets/images/footer.svg" />
+    </footer>
+
+    <div
+      class="rsvp-modal"
+      id="rsvpModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="rsvpModalTitle"
+      hidden
+    >
+      <div class="rsvp-modal-card">
+        <button type="button" class="rsvp-modal-close" aria-label="Tutup">
+          &times;
+        </button>
+        <h2 id="rsvpModalTitle">
+          Terima kasih atas konfirmasi kehadiran Anda.
+        </h2>
+        <p>
+          QR Code akan dikirimkan ke nomor WhatsApp yang telah didaftarkan dan
+          akan digunakan untuk proses registrasi pada hari acara.
+        </p>
+        <button type="button" class="rsvp-modal-ok">Tutup</button>
+      </div>
+    </div>
+
+    <!-- Lightbox Modal untuk Galeri Foto -->
+    <div id="gallery-lightbox" class="lightbox-overlay">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-img" src="" alt="Gallery Preview" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("form-rsvp-general_custom");
+        const submitBtn = document.getElementById("submit_rsvp_general_custom");
+
+        // =================================
+        // LOGIKA VALIDASI
+        // =================================
+        function checkFormValidity() {
+          if (form.checkValidity()) {
+            submitBtn.removeAttribute("disabled");
+          } else {
+            submitBtn.setAttribute("disabled", "true");
+          }
+        }
+        form.addEventListener("input", checkFormValidity);
+        form.addEventListener("change", checkFormValidity);
+
+        checkFormValidity();
+
+        // =================================
+        // LOGIC SUBMIT FORM
+        // =================================
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Disable tombol saat proses pengiriman agar tidak di-klik 2x
+          submitBtn.setAttribute("disabled", "true");
+
+          const formData = new FormData(form);
+          formData.append(
+            "submit_rsvp_general_custom",
+            "submit_rsvp_general_custom",
+          );
+
+          fetch("https://inv2.migunesia.com/smart-seed-xii", {
+            method: "POST",
+            body: formData,
+          })
+            .then(async (response) => {
+              const text = await response.text();
+              const jsonStart = text.indexOf("{");
+              let data = {};
+
+              if (jsonStart !== -1) {
+                try {
+                  data = JSON.parse(text.slice(jsonStart));
+                } catch (e) {
+                  data = {};
+                }
+              }
+
+              console.log("Data : ", data);
+
+              if (data.is_valid_form === true) {
+                Swal.fire({
+                  title: "Terima kasih atas konfirmasi kehadiran Anda.",
+                  html: "QR Code akan dikirimkan ke nomor WhatsApp yang telah didaftarkan dan akan digunakan untuk proses registrasi pada hari acara.",
+                  icon: "success",
+                  confirmButtonText: "OK",
+                }).then(() => {
+                  window.location.href = window.location.pathname;
+                });
+              } else {
+                let msg = "";
+                if (data.message?.email === "field_email_is_duplicat") {
+                  msg += "Email sudah didaftarkan!<br>";
+                }
+                if (data.message?.telephone === "field_telephone_is_duplicat") {
+                  msg += "Nomor WhatsApp sudah didaftarkan!<br>";
+                }
+
+                Swal.fire({
+                  title: "MAAF!",
+                  html: msg || "Registrasi gagal!",
+                  icon: "error",
+                  confirmButtonText: "OK",
+                }).then(() => {
+                  // Aktifkan kembali tombol jika registrasi gagal
+                  checkFormValidity();
+                });
+              }
+            })
+            .catch((error) => {
+              Swal.fire({
+                title: "ERROR!",
+                html: "Terjadi kesalahan: " + error.message,
+                icon: "error",
+                confirmButtonText: "OK",
+              }).then(() => {
+                // Aktifkan kembali tombol jika terjadi error
+                checkFormValidity();
+              });
+            });
+        });
+      });
+    </script>
+
+    <!-- <script>
+      // =================================
+      // LOGIC SUBMIT FORM
+      // =================================
+      document
+        .getElementById("form-rsvp-general_custom")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+          formData.append(
+            "submit_rsvp_general_custom",
+            "submit_rsvp_general_custom",
+          );
+
+          fetch("https://inv.migunesia.com/smart-seed-xii", {
+            method: "POST",
+            body: formData,
+          })
+            .then(async (response) => {
+              const text = await response.text();
+              const jsonStart = text.indexOf("{");
+              let data = {};
+
+              if (jsonStart !== -1) {
+                try {
+                  data = JSON.parse(text.slice(jsonStart));
+                } catch (e) {
+                  data = {};
+                }
+              }
+
+              console.log("Data : ", data);
+
+              if (data.is_valid_form === true) {
+                Swal.fire({
+                  title: "REGISTRASI BERHASIL!",
+                  html: "Terimakasih sudah registrasi!",
+                  icon: "success",
+                  confirmButtonText: "OK",
+                }).then(() => {
+                  window.location.href = window.location.pathname;
+                });
+              } else {
+                let msg = "";
+                if (data.message?.email === "field_email_is_duplicat") {
+                  msg += "Email sudah didaftarkan!<br>";
+                }
+                if (data.message?.telephone === "field_telephone_is_duplicat") {
+                  msg += "Nomor WhatsApp sudah didaftarkan!<br>";
+                }
+
+                Swal.fire({
+                  title: "MAAF!",
+                  html: msg || "Registrasi gagal!",
+                  icon: "error",
+                  confirmButtonText: "OK",
+                }).then(() => {
+                  window.location.href = window.location.pathname;
+                });
+              }
+            })
+            .catch((error) => {
+              Swal.fire({
+                title: "ERROR!",
+                html: "Terjadi kesalahan: " + error.message,
+                icon: "error",
+                confirmButtonText: "OK",
+              }).then(() => {
+                window.location.href = window.location.pathname;
+              });
+            });
+        });
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        new TomSelect("#company", {
+          create: false,
+          maxOptions: null,
+          sortField: {
+            field: "text",
+            direction: "asc",
+          },
+          placeholder: "-- Pilih perusahaan --",
+        });
+
+        companySelect.on("change", () => {
+          companySelect.blur();
+        });
+      });
+    </script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

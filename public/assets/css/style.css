@@ -1,0 +1,2217 @@
+/* =========================================================
+   1. SCROLLBAR BEAUTIFICATION & GLOBAL RESET
+   ========================================================= */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #069046 #e2e8c0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e2e8c0;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #42cc84;
+  border-radius: 8px;
+  border: 2px solid #e2e8c0;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1b8a43;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f0f4d5;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-width: 100%;
+  background-color: #f0f4d5;
+  cursor: default;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  overflow-x: clip;
+  overflow-y: auto;
+}
+
+body {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+/* =========================================================
+   2. POP-UP WELCOME MODAL STYLING
+   ========================================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.modal-card {
+  background-color: #0b6838;
+  width: 70%;
+  max-width: 520px;
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 2px solid #b0c49e;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-greeting {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #e2e8c0;
+  margin: 0 0 8px 0;
+}
+
+.modal-brand {
+  font-family: "Poppins", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: 1px;
+}
+
+.modal-theme {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #f0f4d5;
+  margin: 0 0 30px 0;
+}
+
+.btn-open-invitation {
+  background-color: #ffffff;
+  color: #0b6838;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-open-invitation:hover {
+  background-color: #f0f4d5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.modal-open,
+html.modal-open {
+  overflow: hidden !important;
+  height: 100vh !important;
+  touch-action: none !important;
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    /* padding: 16px; Memberi jarak aman di pinggir layar HP */
+  }
+
+  .modal-card {
+    width: 80%;
+    border-radius: 18px;
+    padding: 28px 20px; /* Padding lebih kecil agar muat di layar HP pendek */
+  }
+
+  .modal-greeting {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .modal-brand {
+    font-size: 24px; /* Ukuran font disesuaikan agar tidak wrap berantakan */
+    margin-bottom: 12px;
+  }
+
+  .modal-theme {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 24px;
+  }
+
+  .btn-open-invitation {
+    width: 100%; /* Tombol full width di HP agar gampang di-tap */
+    font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 10px;
+  }
+}
+
+/* =========================================================
+   3. HEADER & HERO SECTION
+   ========================================================= */
+header {
+  margin-top: 30px;
+  margin-left: 117px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+header .logo-sinarmas {
+  width: 155px;
+  height: 46px;
+  object-fit: contain;
+}
+
+header .logo-smartseed {
+  width: 160px;
+  height: 47px;
+  object-fit: contain;
+}
+
+/* =========================================================
+   STYLING LOGO HEADER MOBILE
+   ========================================================= */
+/* =========================================================
+   RESPONSIVE LOGO HEADER (MOBILE ONLY)
+   ========================================================= */
+@media (max-width: 768px) {
+  header.logo-header,
+  header {
+    margin: 30px 0 0 0 !important; /* Reset margin desktop 50px & 117px */
+    padding: 0 30px !important; /* Jarak aman dari pinggir layar HP */
+    display: flex !important;
+    justify-content: space-between !important; /* Pisah logo ke kiri & kanan */
+    align-items: center !important;
+    width: 100% !important;
+    gap: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  header .logo-sinarmas,
+  header.logo-header .logo-sinarmas {
+    width: 120px !important; /* Ukuran pas di HP */
+    height: auto !important;
+  }
+
+  header .logo-smartseed,
+  header.logo-header .logo-smartseed {
+    width: 125px !important; /* Ukuran pas di HP */
+    height: auto !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  header.logo-header,
+  header {
+    margin-top: 30px;
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+main.hero-container > section {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 140px;
+  margin-right: 80px;
+  margin-top: -20px;
+  gap: 20px;
+}
+
+.content-left {
+  flex: 1;
+  max-width: 580px;
+  margin-left: -20px;
+}
+
+.content-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: -180px;
+}
+
+.tagline {
+  display: flex;
+  align-items: center;
+  margin-top: 180px;
+  margin-bottom: 20px;
+}
+
+.tagline-img {
+  width: 350px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.main-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 38px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+.heading-regular {
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.heading-bold {
+  font-weight: 700;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.content-right img {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.line-separator {
+  width: 65vw;
+  height: 1.1px;
+  background-color: #ccc;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #008844;
+  border-radius: 13px;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.action-button .icon-box {
+  background-color: #069046;
+  padding: 15px 15px;
+  border-right: 1.5px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button .icon-box svg {
+  width: 32px;
+  height: 32px;
+  stroke: #ffffff;
+}
+
+.action-button .button-text {
+  padding: 0 32px;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.action-button:hover {
+  background-color: #069046;
+}
+
+.action-button:hover .button-text {
+  color: #ffffff;
+}
+
+/* =========================================================
+   STYLING RESPONSIVE MOBILE (SMART SEED XII)
+   ========================================================= */
+/* =========================================================
+   STYLING MOBILE (GAMBAR DI ATAS JUDUL)
+   ========================================================= */
+@media (max-width: 768px) {
+  /* 1. Paksa section dan div turunan diabaikan pembungkusnya */
+  main.hero-container > section,
+  .greeting-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 20px 20px 0px !important;
+  }
+
+  .content-left {
+    display: contents !important; /* Mengabaikan pembungkus agar anak elemennya bisa di-order bersama .content-right */
+  }
+
+  /* 2. Atur Urutan Tampil di HP (Order) */
+  .tagline {
+    order: 1 !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  .tagline-img {
+    width: 250px !important;
+    height: auto !important;
+    margin-right: 0 !important;
+  }
+
+  /* Gambar Ilustrasi Pindah ke Urutan 2 (Di atas Judul) */
+  .content-right {
+    order: 2 !important;
+    width: 100% !important;
+    margin: 0 0 24px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .content-right img,
+  .hero-img {
+    max-width: 120% !important;
+    height: auto !important;
+    margin-left: -25%;
+  }
+
+  /* Judul Utama Urutan 3 */
+  .main-heading {
+    order: 3 !important;
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    margin-bottom: 10px !important;
+    width: 100% !important;
+  }
+
+  .heading-regular,
+  .heading-bold {
+    white-space: normal !important;
+    display: inline !important;
+  }
+
+  .line-separator {
+    display: none !important;
+  }
+
+  /* Tombol RSVP Urutan 4 */
+  .action-button {
+    order: 4 !important;
+    width: 70% !important;
+    max-width: 320px !important;
+    border-radius: 10px !important;
+    margin: 0 auto !important;
+  }
+
+  .action-button .icon-box {
+    padding: 10px 10px !important;
+  }
+
+  .action-button .icon-box img {
+    width: 30px;
+  }
+
+  .action-button .button-text {
+    padding: 0 5px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================
+   1. TABLET VERTIKAL / PORTRAIT (769px - 1024px)
+   ========================================================= */
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  /* Kembalikan ke layout 2 Kolom Bersisian */
+  main.hero-container > section,
+  .greeting-section {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 20px 40px !important;
+    gap: 20px !important;
+  }
+
+  .content-left {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1.2 !important;
+    max-width: 55% !important;
+    margin-left: 0 !important;
+  }
+
+  .content-right {
+    display: flex !important;
+    flex: 0.8 !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    margin-right: 0 !important;
+    order: unset !important;
+  }
+
+  .tagline {
+    margin-top: 20px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .tagline-img {
+    width: 280px !important;
+    height: auto !important;
+  }
+
+  .main-heading {
+    font-size: 24px !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+    margin-bottom: 20px !important;
+  }
+
+  .heading-regular,
+  .heading-bold {
+    white-space: normal !important;
+  }
+
+  .line-separator {
+    display: block !important;
+    width: 100% !important;
+    margin: 20px 0 !important;
+    left: 0 !important;
+    margin-left: -50px !important;
+  }
+
+  .content-right img,
+  .hero-img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+  }
+
+  .action-button {
+    width: auto !important;
+    max-width: 320px !important;
+    margin: 0 !important;
+  }
+
+  .action-button .button-text {
+    font-size: 14px !important;
+    padding: 0 16px !important;
+  }
+}
+
+/* =========================================================
+   2. TABLET HORIZONTAL / LANDSCAPE (769px - 1024px / 1280px)
+   ========================================================= */
+@media screen and (min-width: 769px) and (max-width: 1180px) and (orientation: landscape) {
+  /* Kembalikan ke layout 2 Kolom Bersisian */
+  main.hero-container > section,
+  .greeting-section {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 20px 40px !important;
+    gap: 20px !important;
+  }
+
+  .content-left {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1.2 !important;
+    max-width: 55% !important;
+    margin-left: 0 !important;
+  }
+
+  .content-right {
+    display: flex !important;
+    flex: 0.8 !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    margin-right: 0 !important;
+    order: unset !important;
+  }
+
+  .tagline {
+    margin-top: 20px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .tagline-img {
+    width: 280px !important;
+    height: auto !important;
+  }
+
+  .main-heading {
+    font-size: 24px !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+    margin-bottom: 20px !important;
+  }
+
+  .heading-regular,
+  .heading-bold {
+    white-space: normal !important;
+  }
+
+  .line-separator {
+    display: block !important;
+    width: 100% !important;
+    margin: 20px 0 !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .content-right img,
+  .hero-img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+  }
+
+  .action-button {
+    width: auto !important;
+    max-width: 320px !important;
+    margin: 0 !important;
+  }
+
+  .action-button .button-text {
+    font-size: 14px !important;
+    padding: 0 16px !important;
+  }
+}
+
+/* =========================================================
+   TITLE DI TENGAH DENGAN GARIS MEPET LAYAR (KIRI & KANAN)
+   ========================================================= */
+
+/* Pembungkus Header Utama (Ditarik menembus padding kiri & kanan layar) */
+.title-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10vw;
+  margin-right: -10vw;
+  margin-bottom: 4vh;
+  box-sizing: border-box;
+}
+
+/* Reset Teks Judul (Diisi Tepat di Tengah) */
+.title-group .section-title {
+  margin: 0;
+  padding: 0 24px; /* Jarak antara teks judul dengan garis kiri-kanan */
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #0b6838;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* GARIS SEBELAH KIRI (Mepet Ujung Kiri Layar -> Judul) */
+.title-group::before {
+  content: "";
+  flex: 1; /* Memenuhi sisa ruang dari paling kiri */
+  height: 2px; /* Ketebalan garis */
+  background-color: #b0c49e; /* Warna garis hijau */
+}
+
+div[class*="-wrapper"]:nth-of-type(odd) .title-group::before,
+.overview-wrapper:nth-of-type(odd) .title-group::before {
+  opacity: 0 !important;
+}
+
+/* GARIS SEBELAH KANAN (Judul -> Mepet Ujung Kanan Layar) */
+.title-group::after {
+  content: "";
+  flex: 1; /* Memenuhi sisa ruang ke paling kanan */
+  height: 2px; /* Ketebalan garis */
+  background-color: #b0c49e; /* Warna garis hijau */
+}
+
+div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
+.overview-wrapper:nth-of-type(even) .title-group::after {
+  opacity: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .title-group .section-title {
+    font-size: 23px;
+    margin-bottom: -10px;
+  }
+
+  .title-group::before {
+    margin-top: 10px;
+    /* opacity: 0; */
+    margin-right: -15px;
+  }
+  .title-group::after {
+    margin-top: 10px;
+    /* opacity: 0; */
+    margin-left: -15px;
+  }
+}
+
+/* =========================================================
+   5. RINGKASAN ACARA & GALERI FOTO SECTION
+   ========================================================= */
+/* =========================================================
+   KHUSUS DEKORASI GAMBAR BAWAH KANAN (RINGKASAN SAJA)
+   ========================================================= */
+
+/* Hanya mengunci posisi pada section Ringkasan ini saja */
+.ringkasan-section {
+  position: relative !important;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+}
+
+/* Kunci posisi teks agar tetap berada di atas layer gambar */
+.ringkasan-section .overview-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Gambar dekorasi melayang khusus pojok kanan bawah ringkasan */
+.ringkasan-section img {
+  position: absolute;
+  right: -10vw; /* Geser mepet ke kanan layar */
+  bottom: -4vh; /* Duduk manis di pojok kanan bawah */
+  width: 280px; /* Ukuran lebar gambar (sesuaikan jika perlu) */
+  height: auto;
+  pointer-events: none; /* Mencegah gambar mengganggu kursor/klik teks */
+  z-index: 1; /* Posisi gambar di belakang teks */
+  opacity: 0.9;
+  mix-blend-mode: multiply; /* Menyisip mulus dengan background krem */
+}
+
+.overview-gallery-section {
+  width: 100%;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+  box-sizing: border-box;
+}
+
+.overview-wrapper {
+  margin-bottom: 8vh;
+  /* background-color: blue; */
+}
+
+.overview-text {
+  margin-top: 3vh;
+  max-width: 1000px;
+}
+
+.overview-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+}
+
+.overview-text p:last-child {
+  margin-bottom: 0;
+}
+
+.overview-text .highlight-text {
+  font-weight: 500;
+  color: #0b6838;
+  border-left: 4px solid #0b6838;
+  padding-left: 18px;
+  margin-top: 25px;
+}
+
+.gallery-wrapper {
+  margin-top: 6vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 8vh;
+  margin-bottom: 5vh;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 4vh;
+}
+
+.gallery-item {
+  width: 100%;
+  /* height: 240px; */
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid #b0c49e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(11, 104, 56, 0.2);
+  border-color: #0b6838;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.gdrive-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border: 1.5px solid #0b6838;
+  color: #0b6838;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.gdrive-link-btn:hover {
+  background-color: #0b6838;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  .ringkasan-section,
+  .overview-gallery-section {
+    margin-top: 3vh;
+  }
+}
+
+/* =========================================================
+   MEDIA QUERY RESPONSIVE: RINGKASAN ACARA & GALERI FOTO
+   ========================================================= */
+@media (max-width: 768px) {
+  /* 1. Penyesuaian Padding Container Utama */
+  .overview-gallery-section {
+    padding-left: 5vw !important;
+    padding-right: 5vw !important;
+    margin-top: 4vh;
+    margin-bottom: 6vh;
+  }
+
+  .overview-wrapper {
+    margin-bottom: 5vh;
+  }
+
+  /* 2. Ukuran Font & Jarak Teks Ringkasan */
+  .overview-text {
+    margin-top: 2vh;
+  }
+
+  .overview-text p {
+    font-size: 14px; /* Menyesuaikan ukuran font HP agar nyaman dibaca */
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .overview-text .highlight-text {
+    font-size: 14px;
+    padding-left: 14px;
+    border-left-width: 3px;
+    margin-top: 18px;
+  }
+
+  /* 3. Penyesuaian Gambar Dekorasi Melayang di HP */
+  .ringkasan-section img {
+    width: 100px; /* Mengecilkan lebar daun agar tidak menutupi teks */
+    right: -5vw; /* Menggeser posisi tepat di batas kanan layar HP */
+    bottom: -2vh; /* Posisikan sedikit lebih naik agar proporsional */
+    opacity: 0.5; /* Menipiskan bayangan agar teks di atasnya tetap jelas */
+  }
+
+  /* 4. Galeri Foto Grid (Ubah jadi 2 Kolom di HP) */
+  .gallery-wrapper {
+    margin-top: 4vh;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 kolom foto di HP */
+    gap: 12px !important; /* Jarak antar foto lebih rapat */
+    margin-top: 2.5vh;
+  }
+
+  .gallery-item {
+    height: 140px; /* Menyesuaikan tinggi foto galeri */
+    border-radius: 12px;
+  }
+
+  /* 5. Tombol Link Google Drive */
+  .gallery-footer {
+    margin-top: 25px;
+  }
+
+  .gdrive-link-btn {
+    width: 100%; /* Tombol membentang penuh di layar HP */
+    justify-content: center;
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+/* =========================================================
+   6. PERIOD SECTION (WHEN & WHERE)
+   ========================================================= */
+.period-section {
+  width: 100%;
+  padding-left: 10vw;
+  padding-right: 5vw;
+  margin-top: 6vh;
+  box-sizing: border-box;
+}
+
+.when-where-wrapper {
+  margin-bottom: 8vh;
+}
+
+.when-where-dekstop {
+  display: block;
+}
+
+.when-where-mobile {
+  display: none;
+}
+
+/* Tampilan Layar HP (Mobile) */
+@media (max-width: 768px) {
+  .when-where-dekstop {
+    display: none !important; /* Sembunyikan grid 3 card lama saat di HP */
+  }
+
+  .when-where-mobile {
+    display: block !important; /* Munculkan kartu ringkas baru di HP */
+    padding: 0 5vw;
+  }
+
+  /* =========================================================
+   MEDIA QUERY: HANYA AKTIF SAAT DIBUKA DI HP (<= 768px)
+   ========================================================= */
+
+  /* Kontainer Utama Kartu Informasi Acara di HP */
+  .event-info-card {
+    position: relative;
+    overflow: visible !important;
+    background-color: #f0f4d5; /* Background krem lembut */
+    border: 1.5px solid #42cc84; /* Line border hijau */
+    border-radius: 8px;
+    padding: 24px 18px;
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box !important;
+    overflow: hidden; /* Memotong bagian daun agar tidak meluap */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .when-where-mobile .event-info-card > img {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+
+    top: 10%;
+    left: -55px;
+    transform: rotate(7deg);
+  }
+
+  /* Layer Konten Teks */
+  .card-body-content {
+    position: relative;
+    z-index: 2; /* Berada di atas gambar daun */
+    width: 100%;
+  }
+
+  .event-datetime {
+    margin-bottom: 10px;
+  }
+
+  .event-date {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #1a1a1a;
+    margin: 0 0 4px 0;
+  }
+
+  .event-date strong {
+    font-weight: 700;
+  }
+
+  .event-time {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+  }
+
+  .venue-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 4px 0;
+  }
+
+  .venue-address {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #2a2a2a;
+    margin: 0;
+  }
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7vw;
+  align-items: stretch;
+  margin: 0 10vw;
+}
+
+.card-hover-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.info-card {
+  position: relative;
+  width: 100%;
+  max-width: 416px;
+  min-height: 180px;
+  border-radius: 1.2vw;
+  padding: 2.5vw 2vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  .info-card {
+    min-height: 120px;
+  }
+}
+
+.card-icon {
+  position: absolute;
+  top: 1.5vw;
+  right: 1.5vw;
+}
+
+.card-icon img {
+  width: 2.2vw;
+  height: 2.2vw;
+}
+
+.card-outline .card-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6vw;
+  font-weight: 700;
+  margin-bottom: -3px;
+}
+
+.card-outline .highlight-date {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5vw;
+  margin-top: 0.5vh;
+  margin-bottom: 0;
+}
+
+.card-outline {
+  background-color: transparent;
+  border: 2px solid #069046;
+  color: #000000;
+}
+
+.time-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6vw;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+}
+
+.card-outline h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3vw;
+  font-weight: 700;
+  margin: 0 0 1vh 0;
+}
+
+.location-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95vw;
+  line-height: 1.4;
+  color: #333333;
+  margin: 0;
+}
+
+.leaf-svg {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 2;
+}
+
+.leaf-bottom-right {
+  bottom: -3.8vw;
+  right: 1vw;
+  width: 8vw;
+  rotate: -4deg;
+}
+
+.leaf-bottom-center {
+  bottom: -3.8vw;
+  left: 10%;
+  width: 8vw;
+  rotate: -95deg;
+}
+
+.leaf-top-left {
+  top: -3.8vw;
+  left: 5%;
+  width: 8vw;
+}
+
+.card-hover-wrapper:hover .info-card {
+  background-color: #069046;
+  color: #f0f4d5;
+}
+
+.card-hover-wrapper:hover .info-card .time-text,
+.card-hover-wrapper:hover .info-card .location-text,
+.card-hover-wrapper:hover .info-card .highlight-date {
+  color: #f0f4d5;
+}
+
+.card-hover-wrapper:hover .info-card .card-icon {
+  filter: brightness(0) invert(1);
+}
+
+.card-hover-wrapper:hover .leaf-svg {
+  opacity: 1;
+}
+
+.card-hover-wrapper:hover .leaf-bottom-right,
+.card-hover-wrapper:hover .leaf-bottom-center,
+.card-hover-wrapper:hover .leaf-top-left {
+  transform: translateY(0) scale(1);
+}
+
+/* =========================================================
+   7. SESSIONS AND DETAILS SECTION
+   ========================================================= */
+.sessions-wrapper {
+  margin-bottom: 8vh;
+  position: relative;
+}
+
+.sessions-container {
+  position: relative;
+  width: 80%;
+  margin: 0 10vw;
+}
+
+.sessions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4vw;
+  margin-top: 3vh;
+  position: relative;
+  z-index: 2;
+}
+
+.session-item {
+  margin-bottom: 3.5vh;
+}
+
+/* Waktu / Jam Acara */
+.session-time {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0b6838;
+  /* background-color: #e2e8c0; */
+  display: inline-block;
+  /* padding: 4px 12px; */
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+/* Judul Sesi */
+.session-title-item {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+}
+
+.session-desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #333333;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* .session-item h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 6px 0;
+} */
+
+.session-sub {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 8px 0;
+  line-height: 1.35;
+}
+
+.session-author {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: #1a1a1a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.session-bullets {
+  margin: 10px 0 0 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.session-bullets li {
+  font-family: "Poppins", sans-serif;
+  font-size: 14.5px;
+  color: #1a1a1a;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.session-bullets li::marker {
+  color: #000000;
+  font-size: 12px;
+}
+
+.session-leaf-bg {
+  position: absolute;
+  right: -10vw;
+  bottom: -4vh;
+  width: 320px;
+  height: auto;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+}
+
+/* RESPONSIVE LAYOUT UNTUK LAYAR HP/TABLET */
+@media (max-width: 768px) {
+  .sessions-container {
+    width: 90%;
+    margin: 0 5vw;
+  }
+
+  .sessions-grid {
+    grid-template-columns: 1fr; /* Jadi 1 kolom di layar HP */
+    gap: 0;
+  }
+
+  .session-item {
+    margin-bottom: 2vh;
+  }
+
+  /* Waktu / Jam Acara */
+  .session-time {
+    font-size: 16px;
+  }
+
+  /* Judul Sesi */
+  .session-title-item {
+    font-size: 15px;
+  }
+
+  .session-desc {
+    font-size: 15px;
+  }
+
+  .session-decoration {
+    position: absolute;
+    top: 50px;
+    right: -50px;
+    width: 100px;
+    transform: scaleX(-1);
+    /* background-color: red; */
+  }
+
+  .session-leaf-bg {
+    width: 150px;
+    bottom: 10px;
+  }
+}
+
+/* =========================================================
+   8. OUR SPEAKERS SECTION
+   ========================================================= */
+
+.speakers-section {
+  width: 100%;
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+  box-sizing: border-box;
+}
+
+/* .speakers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+  margin: 100px 5vw;
+  gap: 80px 60px;
+} */
+
+.speakers-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 120px 20px !important;
+  margin: 150px 4vw !important;
+  margin-bottom: 10px !important;
+}
+
+.speaker-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.speaker-image-wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border: 2px solid #069046;
+  border-radius: 22px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: visible;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.speaker-image-wrapper::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 80px;
+  background-color: #f0f4d5;
+  z-index: 1;
+}
+
+.speaker-card:first-child .speaker-image-wrapper::before {
+  height: 200px;
+}
+
+.speaker-card:nth-child(2) .speaker-image-wrapper::before {
+  height: 170px;
+}
+
+.speaker-card:nth-child(3) .speaker-image-wrapper::before {
+  height: 180px;
+}
+
+.speaker-img {
+  width: auto;
+  max-width: 100%;
+  height: 130%;
+  object-fit: contain;
+  object-position: bottom center;
+  position: relative;
+  z-index: 2;
+}
+
+.speaker-badge {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  transform-origin: center center;
+  z-index: 3;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #1b8a43;
+  white-space: nowrap;
+}
+
+.speaker-info {
+  margin-top: 18px;
+  max-width: 347px;
+}
+
+.speaker-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 6px 0;
+}
+
+.speaker-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  .speakers-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 120px 15px !important;
+    margin: 150px 4vw !important;
+    margin-bottom: -50px !important;
+  }
+}
+
+/* =========================================================
+   MEDIA QUERY: TAMPILAN MOBILE (BERJEJER 2 FOTO)
+   ========================================================= */
+@media (max-width: 768px) {
+  .speakers-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 40px 15px !important;
+    margin: 60px 4vw !important;
+  }
+
+  .speaker-card {
+    width: 100% !important;
+  }
+
+  /* Penyesuaian tinggi frame foto di layar kecil */
+  .speaker-image-wrapper {
+    height: 150px !important;
+    width: 150px;
+    border-radius: 16px !important;
+  }
+
+  .speaker-image-wrapper::before {
+    height: 60px !important;
+  }
+
+  .speaker-card:nth-child(1) .speaker-image-wrapper::before {
+    height: 140px !important;
+  }
+
+  .speaker-card:nth-child(2) .speaker-image-wrapper::before {
+    height: 120px !important;
+  }
+
+  .speaker-card:nth-child(3) .speaker-image-wrapper::before {
+    height: 130px !important;
+  }
+
+  .speaker-badge {
+    font-size: 12px !important;
+  }
+
+  .speaker-name {
+    font-size: 15px !important;
+  }
+
+  .speaker-title {
+    font-size: 12px !important;
+  }
+}
+
+/* =========================================================
+   9. FORM RSVP SECTION & MODAL
+   ========================================================= */
+.form-section {
+  width: 100%;
+  padding-left: 10vw;
+  padding-right: 5vw;
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+  box-sizing: border-box;
+}
+
+.rsvp-container {
+  width: calc(100% - 5vw);
+  /* max-width: 1100px; */
+}
+
+.rsvp-card {
+  background-color: #ffffff;
+  border: 1.5px solid #0b6838;
+  border-radius: 20px;
+  padding: 40px 45px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+  margin-top: 30px;
+}
+
+.rsvp-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #333333;
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.form-section-label,
+.rsvp-info-block h3,
+.rsvp-consent h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b6838;
+}
+
+.form-section-label {
+  border-bottom: 1px solid #b0c49e;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+}
+
+.rsvp-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 12px 16px;
+  background-color: #f9fbf2;
+  border: 1.5px solid #b0c49e;
+  border-radius: 10px;
+  color: #1a1a1a;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0b6838;
+  box-shadow: 0 0 0 3px rgba(11, 104, 56, 0.15);
+  background-color: #ffffff;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-note {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: #555555;
+  margin-top: 5px;
+}
+
+.rsvp-info-block,
+.rsvp-consent {
+  border-top: 1px solid #b0c49e;
+  margin-top: 32px;
+  padding-top: 24px;
+}
+
+.rsvp-info-block h3,
+.rsvp-consent h3 {
+  margin: 0 0 12px;
+}
+
+.rsvp-info-block p,
+/* .rsvp-info-block a, */
+.consent-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.rsvp-info-block p {
+  margin: 0 0 10px;
+}
+
+.rsvp-info-block a {
+  font-size: 12px;
+  color: #0b6838;
+  font-weight: 600;
+}
+
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #333333;
+  cursor: pointer;
+}
+
+.consent-label input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  accent-color: #0b6838;
+}
+
+.consent-label .consent-approval {
+  display: flex;
+  align-items: top;
+  gap: 5px;
+}
+
+.form-action {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rsvp-submit-btn {
+  background-color: #0b6838;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(11, 104, 56, 0.2);
+}
+
+.rsvp-submit-btn:disabled {
+  background-color: #aab9a7;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.rsvp-submit-btn:disabled:hover {
+  background-color: #aab9a7;
+  transform: none;
+}
+
+.rsvp-submit-btn:hover {
+  background-color: #1b8a43;
+  transform: translateY(-2px);
+}
+
+.rsvp-submit-btn:active {
+  transform: translateY(0);
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.rsvp-modal[hidden] {
+  display: none;
+}
+
+.rsvp-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(11, 35, 22, 0.55);
+}
+
+.rsvp-modal-card {
+  position: relative;
+  width: min(100%, 560px);
+  padding: 42px 40px 34px;
+  border: 1.5px solid #0b6838;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.rsvp-modal-card h2 {
+  margin: 0 0 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  line-height: 1.35;
+  color: #0b6838;
+}
+
+.rsvp-modal-card p {
+  margin: 0 0 28px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.rsvp-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  border: 0;
+  background: transparent;
+  color: #0b6838;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.rsvp-modal-ok {
+  padding: 11px 28px;
+  border: 0;
+  border-radius: 10px;
+  background: #0b6838;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CUSTOM STYLING TOM SELECT (WARNANA MATCHE)
+   ========================================================= */
+
+/* 1. Box Input Select Utama */
+.ts-control {
+  background-color: #f9fbf2 !important;
+  border: 1.5px solid #b0c49e !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+  font-size: 15px !important;
+  color: #1a1a1a !important;
+  box-shadow: none !important;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* 2. Focus State (Saat Diklik/Aktif Cari) */
+.ts-wrapper.focus .ts-control {
+  border-color: #069046 !important;
+  box-shadow: 0 0 0 3px rgba(6, 144, 70, 0.15) !important;
+}
+
+/* 3. Teks Placeholder */
+.ts-control input::placeholder {
+  color: #757575 !important;
+}
+
+/* 4. Panah Dropdown */
+.ts-wrapper.single .ts-control:after {
+  border-color: #069046 transparent transparent transparent !important;
+  right: 18px !important;
+}
+
+/* 5. Dropdown List Pilihan */
+.ts-dropdown {
+  background-color: #f9fbf2 !important;
+  border: 1.5px solid #b0c49e !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  margin-top: 6px !important;
+  overflow: hidden !important;
+}
+
+/* 6. Item Opsi di Dalam Dropdown */
+.ts-dropdown .option {
+  padding: 10px 16px !important;
+  font-family: "Poppins", "Inter", sans-serif !important;
+  font-size: 14px !important;
+  color: #1a1a1a !important;
+}
+
+/* 7. Hover & Active Option (Saat Kursor Mengarah ke Opsi) */
+.ts-dropdown .option.active,
+.ts-dropdown .option:hover {
+  background-color: #069046 !important;
+  color: #ffffff !important;
+}
+
+footer {
+  max-width: 100vw;
+}
+
+footer img {
+  width: 100%;
+  margin-bottom: -3px;
+}
+
+@media (max-width: 700px) {
+  .rsvp-card {
+    padding: 28px 20px;
+  }
+
+  .rsvp-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-action {
+    justify-content: stretch;
+  }
+
+  .rsvp-submit-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   MEDIA QUERY: RESPONSIVE MOBILE FORM RSVP & MODAL
+   ========================================================= */
+@media (max-width: 768px) {
+  /* 1. Penyesuaian Padding Container Utama */
+  .form-section {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-top: 5vh;
+    margin-bottom: 6vh;
+  }
+
+  .rsvp-container {
+    width: 100%; /* Memenuhi lebar kontainer mobile */
+  }
+
+  /* 2. Kartu Form RSVP */
+  .rsvp-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+    margin-top: 20px;
+  }
+
+  .rsvp-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  /* 3. Grid Form diubah jadi 1 Kolom Vertikal */
+  .rsvp-form .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* Force elemen full-width tetap 1 kolom */
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  /* Mengunci semua input agar muat di dalam card */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100% !important; /* Paksa lebar menyesuaikan kolom */
+    box-sizing: border-box !important; /* Hitung padding di dalam lebar */
+    max-width: 100% !important; /* Mencegah melebar keluar */
+  }
+
+  /* 4. Persetujuan & Tombol Submit */
+  .rsvp-consent {
+    margin-top: 24px;
+    padding-top: 18px;
+  }
+
+  .consent-label {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .form-action {
+    margin-top: 24px;
+    justify-content: stretch;
+  }
+
+  /* Tombol Submit Memenuhi Lebar Layar */
+  .rsvp-submit-btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  /* 5. Pop-up Modal Konfirmasi Success Mobile */
+  .rsvp-modal {
+    padding: 16px;
+  }
+
+  .rsvp-modal-card {
+    padding: 32px 20px 24px;
+    border-radius: 16px;
+  }
+
+  .rsvp-modal-card h2 {
+    font-size: 20px;
+  }
+
+  .rsvp-modal-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .rsvp-modal-ok {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* =========================================================
+  10. ANIMASI MASUK
+   ========================================================= */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(28px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.modal-card {
+  animation: modal-pop 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.invitation-opened header,
+.invitation-opened .content-left {
+  animation: reveal-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.invitation-opened .content-right {
+  animation: reveal-right 0.9s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ringkasan-section,
+.gallery-wrapper,
+.when-where-wrapper,
+.sessions-wrapper,
+footer {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.ringkasan-section.is-visible,
+.gallery-wrapper.is-visible,
+.when-where-wrapper.is-visible,
+.sessions-wrapper.is-visible,
+footer.is-visible {
+  animation: reveal-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.gallery-item,
+.session-item,
+.speaker-card {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.gallery-item.is-visible,
+.session-item.is-visible,
+.speaker-card.is-visible {
+  animation: reveal-up 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.gallery-item:nth-child(2),
+.speaker-card:nth-child(2),
+.session-col .session-item:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.gallery-item:nth-child(3),
+.speaker-card:nth-child(3),
+.session-col .session-item:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.gallery-item:nth-child(4),
+.speaker-card:nth-child(4),
+.session-col .session-item:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.gallery-item:nth-child(5),
+.speaker-card:nth-child(5),
+.session-col .session-item:nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.gallery-item:nth-child(6),
+.speaker-card:nth-child(6),
+.session-col .session-item:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+.speaker-card:nth-child(7) {
+  animation-delay: 0.48s;
+}
+
+.speaker-card:nth-child(8) {
+  animation-delay: 0.56s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   LIGHTBOX GALERI FOTO
+   ========================================================= */
+.gallery-item img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.03);
+}
+
+/* Container Lightbox Overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Gambar Besar */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.lightbox-overlay.active .lightbox-img {
+  transform: scale(1);
+}
+
+/* Tombol Close (X) */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: #00e676;
+  transform: scale(1.15);
+}
+
+/* =========================================================
+   LIGHTBOX GALERI FOTO (MOBILE OPTIMIZATION)
+   ========================================================= */
+@media (max-width: 768px) {
+  /* Gambar di HP agar pas dan punya batas aman */
+  .lightbox-img {
+    max-width: 95%;
+    max-height: 80vh;
+    border-radius: 8px;
+  }
+
+  /* Tombol Close (X) dibuat lebih besar dan mudah di-tap */
+  .lightbox-close {
+    top: 16px;
+    right: 20px;
+    font-size: 30px;
+    padding: 10px; /* Area sentuh jari lebih luas */
+  }
+}
