@@ -1360,7 +1360,10 @@
                   icon: "success",
                   confirmButtonText: "OK",
                 }).then(() => {
-                  window.location.href = window.location.pathname;
+                  const form = document.getElementById(
+                    "form-rsvp-general_custom",
+                  );
+                  if (form) form.reset();
                 });
               } else {
                 let msg = "";
