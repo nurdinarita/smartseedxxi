@@ -763,6 +763,7 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 
 .overview-text p {
   font-family: "Poppins", sans-serif;
+  text-align: justify;
   font-size: 16px;
   line-height: 1.8;
   color: #1a1a1a;
@@ -951,6 +952,25 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   display: none;
 }
 
+.maps-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #069046;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.maps-link:hover {
+  /* color: #f0f4d5; */
+  text-decoration: none;
+  transform: translateX(3px);
+}
+
 /* Tampilan Layar HP (Mobile) */
 @media (max-width: 768px) {
   .when-where-dekstop {
@@ -1087,20 +1107,22 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 }
 
 .card-icon img {
-  width: 2.2vw;
-  height: 2.2vw;
+  width: 2vw;
+  height: 2vw;
 }
 
 .card-outline .card-content h3 {
+  margin-top: 13px;
   font-family: "Poppins", sans-serif;
-  font-size: 1.6vw;
+  white-space: nowrap;
+  font-size: 1.2vw;
   font-weight: 700;
   margin-bottom: -3px;
 }
 
 .card-outline .highlight-date {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.1vw;
   margin-top: 0.5vh;
   margin-bottom: 0;
 }
@@ -1113,7 +1135,7 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 
 .time-text {
   font-family: "Poppins", sans-serif;
-  font-size: 1.6vw;
+  font-size: 1.4vw;
   font-weight: 800;
   color: #000000;
   margin: 0;
@@ -1128,8 +1150,9 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 
 .location-text {
   font-family: "Poppins", sans-serif;
+  padding-top: 5px;
   font-size: 0.95vw;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #333333;
   margin: 0;
 }
@@ -1164,6 +1187,10 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 .card-hover-wrapper:hover .info-card {
   background-color: #069046;
   color: #f0f4d5;
+
+  .maps-link {
+    color: #f0f4d5;
+  }
 }
 
 .card-hover-wrapper:hover .info-card .time-text,
@@ -1668,6 +1695,94 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   font-size: 12px;
   color: #0b6838;
   font-weight: 600;
+}
+
+/* =========================================================
+   STYLING TABEL KONTAK RESPONSIF
+   ========================================================= */
+.contact-table-wrapper {
+  width: 100%;
+  margin-top: 12px;
+  overflow-x: auto; /* Antisipasi jika layar sangat kecil */
+}
+
+.contact-table {
+  border: none;
+  border-collapse: collapse;
+  font-size: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-table td {
+  padding: 6px 0;
+  vertical-align: top;
+}
+
+.contact-label {
+  padding-right: 12px !important;
+  font-weight: 600;
+  color: #222222;
+  white-space: nowrap; /* Mencegah nama terpotong berantakan */
+}
+
+.contact-colon {
+  padding-right: 12px !important;
+  width: 10px;
+}
+
+.contact-value {
+  word-break: break-word; /* Memutus URL/Email jika terlalu panjang di HP */
+}
+
+.contact-value a {
+  font-size: 12px;
+  color: #0b6838;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-value a:hover {
+  color: #0b6838;
+  text-decoration: underline;
+}
+
+/* Penyesuaian Tampilan untuk Layar HP (Mobile Layout) */
+@media (max-width: 480px) {
+  .contact-table,
+  .contact-table tbody,
+  .contact-table tr,
+  .contact-table td {
+    display: block; /* Ubah tabel menjadi stacked layout di HP */
+    width: 100%;
+  }
+
+  /* .contact-table tr {
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 8px;
+  } */
+
+  .contact-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .contact-colon {
+    display: none !important;
+  }
+
+  .contact-label {
+    padding-right: 0 !important;
+    padding-bottom: 2px !important;
+    font-size: 14px;
+    /* color: #666666; */
+  }
+
+  .contact-value {
+    padding-top: 0 !important;
+    font-size: 14px !important;
+  }
 }
 
 .consent-label {
