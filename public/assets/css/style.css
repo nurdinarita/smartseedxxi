@@ -1066,7 +1066,7 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 7vw;
+  gap: 3vw;
   align-items: stretch;
   margin: 0 10vw;
 }
@@ -1079,7 +1079,8 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 .info-card {
   position: relative;
   width: 100%;
-  max-width: 416px;
+  max-width: 380px;
+  min-width: 380px;
   min-height: 180px;
   border-radius: 1.2vw;
   padding: 2.5vw 2vw;
@@ -1096,6 +1097,9 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   .info-card {
+    width: 100%;
+    max-width: 210px;
+    min-width: 210px;
     min-height: 120px;
   }
 }
