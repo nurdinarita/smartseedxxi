@@ -1066,9 +1066,13 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3vw;
+  gap: 2vw;
   align-items: stretch;
-  margin: 0 10vw;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  justify-items: center;
 }
 
 .card-hover-wrapper {
@@ -1098,8 +1102,8 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   .info-card {
     width: 100%;
-    max-width: 210px;
-    min-width: 210px;
+    max-width: 220px;
+    min-width: 220px;
     min-height: 120px;
   }
 }
@@ -1270,6 +1274,10 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 .session-desc {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  word-break: break-word;
   color: #333333;
   line-height: 1.5;
   margin: 0;
@@ -1308,16 +1316,20 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 
 .session-bullets li {
   font-family: "Poppins", sans-serif;
-  font-size: 14.5px;
+  font-size: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  word-break: break-word;
   color: #1a1a1a;
   line-height: 1.5;
   margin-bottom: 8px;
 }
 
-.session-bullets li::marker {
+/* .session-bullets li::marker {
   color: #000000;
   font-size: 12px;
-}
+} */
 
 .session-leaf-bg {
   position: absolute;
@@ -1349,16 +1361,20 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 
   /* Waktu / Jam Acara */
   .session-time {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   /* Judul Sesi */
   .session-title-item {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .session-desc {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .session-bullets li {
+    font-size: 14px;
   }
 
   .session-decoration {
@@ -1386,15 +1402,6 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   margin-bottom: 10vh;
   box-sizing: border-box;
 }
-
-/* .speakers-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: auto;
-  margin: 100px 5vw;
-  gap: 80px 60px;
-} */
 
 .speakers-grid {
   display: grid !important;
@@ -1518,7 +1525,7 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   .speakers-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 40px 15px !important;
+    gap: 50px 15px !important;
     margin: 60px 4vw !important;
   }
 
@@ -1600,6 +1607,7 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 .form-section-label,
 .rsvp-info-block h3,
 .rsvp-consent h3 {
+  /* margin-top: 13px !important; */
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -1701,12 +1709,16 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   font-weight: 600;
 }
 
+.registration-info {
+  margin-top: 16px !important;
+}
+
 /* =========================================================
    STYLING TABEL KONTAK RESPONSIF
    ========================================================= */
 .contact-table-wrapper {
   width: 100%;
-  margin-top: 12px;
+  /* margin-top: 12px; */
   overflow-x: auto; /* Antisipasi jika layar sangat kecil */
 }
 
@@ -1740,7 +1752,7 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 }
 
 .contact-value a {
-  font-size: 12px;
+  font-size: 14px;
   color: #0b6838;
   font-weight: 600;
   text-decoration: none;
@@ -1753,7 +1765,7 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 }
 
 /* Penyesuaian Tampilan untuk Layar HP (Mobile Layout) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .contact-table,
   .contact-table tbody,
   .contact-table tr,
@@ -1779,13 +1791,16 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   .contact-label {
     padding-right: 0 !important;
     padding-bottom: 2px !important;
-    font-size: 14px;
+    font-size: 12px;
     /* color: #666666; */
   }
 
-  .contact-value {
+  .rsvp-info-block a,
+  .contact-value,
+  .contact-value a {
+    /* text-wrap: nowrap; */
     padding-top: 0 !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 }
 
