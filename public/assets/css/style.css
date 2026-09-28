@@ -1326,6 +1326,25 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   margin-bottom: 8px;
 }
 
+.session-speaker {
+  font-size: 14px;
+  color: #222222;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+
+.session-bullets li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.session-bullets li span {
+  display: block;
+  font-size: 13.5px;
+  color: #555555;
+  margin-top: 2px;
+}
+
 /* .session-bullets li::marker {
   color: #000000;
   font-size: 12px;
@@ -1404,11 +1423,113 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 }
 
 .speakers-grid {
-  display: grid !important;
-  grid-template-columns: repeat(4, 1fr) !important;
-  gap: 120px 20px !important;
-  margin: 150px 4vw !important;
-  margin-bottom: 10px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* Jarak antara baris atas dan baris bawah */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 1. Baris Atas (3 Speaker): Menggunakan Flexbox Rapat di Tengah */
+.speakers-top-row {
+  display: flex;
+  justify-content: center; /* Rata tengah */
+  align-items: stretch;
+  margin-top: 100px;
+  gap: 50px; /* <-- ATUR JARAK ANTAR KARTU DI SINI (Ubah ke 12px/10px jika mau lebih rapat) */
+}
+
+.speakers-top-row .speaker-card {
+  flex: 0 1 260px; /* Lebar kartu ideal 260px */
+  max-width: 260px;
+}
+
+/* 2. Baris Bawah (4 Speaker): Menggunakan Grid 4 Kolom */
+.speakers-bottom-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+/* =========================================================
+   MOBILE & TABLET RESPONSIVE (Up to 1024px)
+   ========================================================= */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* 1. Gabungkan kedua baris agar mengalir dalam 1 Grid Utama (2 Kolom) */
+  .speakers-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    padding: 0 20px !important;
+    max-width: 800px !important; /* Batas lebar grid agar rapi di tablet */
+    margin: 0 auto !important;
+  }
+
+  /* 2. Abaikan pembungkus row agar kartu menyatu di grid utama */
+  .speakers-top-row,
+  .speakers-bottom-row {
+    display: contents !important;
+  }
+
+  .speaker-card {
+    margin-top: 160px;
+  }
+  /* 3. Ukuran kartu fleksibel mengikuti kolom */
+  .speakers-card,
+  .speaker-card,
+  .speakers-top-row .speaker-card,
+  .speakers-bottom-row .speaker-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: unset !important;
+  }
+
+  /* 4. Pak Purnomo (Kartu Pertama) Full-Width di Tengah */
+  .speakers-top-row .speaker-card:first-child {
+    grid-column: 1 / -1 !important; /* Membentang dari kiri ke kanan */
+    max-width: 320px !important; /* Ukuran kartu Pak Purnomo di Tablet/Mobile */
+    justify-self: center !important; /* Tepat di tengah */
+  }
+
+  /* 5. Ukuran Foto Speaker Lebih Besar di Tablet (Khusus Layar > 480px) */
+  .speaker-img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Gabungkan kedua baris agar mengalir dalam 1 Grid Utama */
+  .speakers-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    padding: 0 12px;
+  }
+
+  /* 2. Abaikan pembungkus row agar kartu anak-anaknya sejajar di grid utama */
+  .speakers-top-row,
+  .speakers-bottom-row {
+    display: contents !important;
+  }
+
+  /* 3. Reset ukuran kartu agar fleksibel mengikuti kolom mobile */
+  .speakers-card,
+  .speakers-top-row .speaker-card,
+  .speakers-bottom-row .speaker-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: unset !important;
+  }
+
+  /* 4. Pak Purnomo (Kartu Pertama) Full-Width di Tengah */
+  .speakers-top-row .speaker-card:first-child {
+    grid-column: 1 / -1 !important; /* Membentang dari kiri ke kanan */
+    max-width: 260px !important; /* Batas lebar agar tidak terlalu raksasa */
+    justify-self: center !important; /* Posisikan tepat di tengah */
+  }
 }
 
 .speaker-card {
@@ -1445,17 +1566,17 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   z-index: 1;
 }
 
-.speaker-card:first-child .speaker-image-wrapper::before {
+.speakers-top-row .speaker-card:first-child .speaker-image-wrapper::before {
   height: 200px;
 }
 
-.speaker-card:nth-child(2) .speaker-image-wrapper::before {
-  height: 170px;
+.speakers-top-row .speaker-card:nth-child(2) .speaker-image-wrapper::before {
+  height: 190px;
 }
 
-.speaker-card:nth-child(3) .speaker-image-wrapper::before {
-  height: 180px;
-}
+/* .speakers-top-row .speaker-card:nth-child(3) .speaker-image-wrapper::before {
+  height: 80px;
+} */
 
 .speaker-img {
   width: auto;
@@ -1508,7 +1629,7 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   margin: 0;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+/* @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
   .speakers-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1516,7 +1637,7 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
     margin: 150px 4vw !important;
     margin-bottom: -50px !important;
   }
-}
+} */
 
 /* =========================================================
    MEDIA QUERY: TAMPILAN MOBILE (BERJEJER 2 FOTO)
@@ -1541,23 +1662,23 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   }
 
   .speaker-image-wrapper::before {
-    height: 60px !important;
+    height: 50px !important;
   }
 
-  .speaker-card:nth-child(1) .speaker-image-wrapper::before {
-    height: 140px !important;
+  .speakers-top-row .speaker-card:nth-child(1) .speaker-image-wrapper::before {
+    height: 115px !important;
   }
 
-  .speaker-card:nth-child(2) .speaker-image-wrapper::before {
-    height: 120px !important;
+  .speakers-top-row .speaker-card:nth-child(2) .speaker-image-wrapper::before {
+    height: 115px !important;
   }
 
-  .speaker-card:nth-child(3) .speaker-image-wrapper::before {
+  /* .speaker-card:nth-child(3) .speaker-image-wrapper::before {
     height: 130px !important;
-  }
+  } */
 
   .speaker-badge {
-    font-size: 12px !important;
+    font-size: 10px !important;
   }
 
   .speaker-name {
