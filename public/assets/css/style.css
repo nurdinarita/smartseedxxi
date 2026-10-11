@@ -1486,11 +1486,11 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   }
 
   /* 4. Pak Purnomo (Kartu Pertama) Full-Width di Tengah */
-  .speakers-top-row .speaker-card:first-child {
-    grid-column: 1 / -1 !important; /* Membentang dari kiri ke kanan */
-    max-width: 320px !important; /* Ukuran kartu Pak Purnomo di Tablet/Mobile */
-    justify-self: center !important; /* Tepat di tengah */
-  }
+  /* .speakers-top-row .speaker-card:first-child {
+    grid-column: 1 / -1 !important;
+    max-width: 320px !important;
+    justify-self: center !important;
+  } */
 
   /* 5. Ukuran Foto Speaker Lebih Besar di Tablet (Khusus Layar > 480px) */
   .speaker-img {
@@ -1522,13 +1522,6 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
     max-width: 100% !important;
     width: 100% !important;
     flex: unset !important;
-  }
-
-  /* 4. Pak Purnomo (Kartu Pertama) Full-Width di Tengah */
-  .speakers-top-row .speaker-card:first-child {
-    grid-column: 1 / -1 !important; /* Membentang dari kiri ke kanan */
-    max-width: 260px !important; /* Batas lebar agar tidak terlalu raksasa */
-    justify-self: center !important; /* Posisikan tepat di tengah */
   }
 }
 
@@ -1571,7 +1564,11 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
 }
 
 .speakers-top-row .speaker-card:nth-child(2) .speaker-image-wrapper::before {
-  height: 190px;
+  height: 160px;
+}
+
+.speakers-top-row .speaker-card:nth-child(3) .speaker-image-wrapper::before {
+  height: 180px;
 }
 
 /* .speakers-top-row .speaker-card:nth-child(3) .speaker-image-wrapper::before {
@@ -1670,6 +1667,10 @@ div[class*="-wrapper"]:nth-of-type(even) .title-group::after,
   }
 
   .speakers-top-row .speaker-card:nth-child(2) .speaker-image-wrapper::before {
+    height: 90px !important;
+  }
+
+  .speakers-top-row .speaker-card:nth-child(3) .speaker-image-wrapper::before {
     height: 115px !important;
   }
 
